@@ -252,182 +252,83 @@ English: @TeleSeedCH
 Persian: @IranSeed
 ]],
     help_text_realm = [[
-Realm Commands:
+  🔮Commands list :🔮
 
-!creategroup [name]
-Create a group
-
-!createrealm [name]
-Create a realm
-
-!setname [name]
-Set realm name
-
-!setabout [group_id] [text]
-Set a group's about text
-
-!setrules [grupo_id] [text]
-Set a group's rules
-
-!lock [grupo_id] [setting]
-Lock a group's setting
-
-!unlock [grupo_id] [setting]
-Unock a group's setting
-
-!wholist
-Get a list of members in group/realm
-
-!who
-Get a file of members in group/realm
-
-!type
-Get group type
-
-!kill chat [grupo_id]
-Kick all memebers and delete group
-
-!kill realm [realm_id]
-Kick all members and delete realm
-
-!addadmin [id|username]
-Promote an admin by id OR username *Sudo only
-
-!removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
-
-!list groups
-Get a list of all groups
-
-!list realms
-Get a list of all realms
-
-!log
-Get a logfile of current group or realm
-
-!broadcast [text]
-!broadcast Hello !
-Send text to all groups
-» Only sudo users can run this command
-
-!bc [group_id] [text]
-!bc 123456789 Hello !
-This command will send text to [group_id]
-
-» U can use both "/" and "!" 
-
-» Only mods, owner and admin can add bots in group
-
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-» Only owner can use res,setowner,promote,demote and log commands
-
-]],
-    help_text = [[
-Commands list :
-
-!kick [username|id]
-You can also do it by reply
-
-!ban [ username|id]
-You can also do it by reply
-
+!kick 
+اخراج کردن فرد 
+!ban 
+مسدود کردن فرد 
 !unban [id]
-You can also do it by reply
-
+حذف مسدودی فرد 
 !who
-Members list
-
+لیست افراد گروه
 !modlist
-Moderators list
-
+لیست مدیران
 !promote [username]
-Promote someone
-
+افزایش مقام
 !demote [username]
-Demote someone
-
+کاهش مقام
 !kickme
-Will kick user
-
+خروج از گروه 
 !about
-Group description
-
+درباره گروه
 !setphoto
-Set and locks group photo
-
+ثبت عکس گروه
 !setname [name]
-Set group name
-
+ثبت اسم گروه
 !rules
-Group rules
-
+قوانین گروه
 !id
-Return group id or user id
-
+ایدی گروه و فرد 
 !help
-Get commands list
-
+نشان دادن همین لیست 
 !lock [member|name|bots|leave] 
-Locks [member|name|bots|leaveing] 
-
+قفل کردن : (اعضا , نام گروه , ربات ها , لفت دادن ممبر ها )
 !unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
+حذف قفل کردن : (اعضا , نام گروه , ربات ها , لفت دادن ممبر ها )
 !set rules [text]
-Set [text] as rules
-
+ثبت قوانین 
 !set about [text]
-Set [text] as about
-
+ثبت درباره
 !settings
-Returns group settings
-
+تنظیمات گروه
 !newlink
-Create/revoke your group link
-
+لینک جدید 
 !link
-Returns group link
-
+لینک کنونی ربات 
+!filter list
+لیست کلمات فیلتر 
+!filter + 
+اضافه کردن دستور جدید به کلمات فیلتر
+!filter -
+ پاک کردن دستور از کلمات فیلتر 
+!filter >
+کاربر در صورتی که کلمه مربوطه را ارسال کند هشدار و اگر به حد مجاز برسد اخراج خواهد شد.
+!webshot
+تصویر وب 
 !owner
-Returns group owner id
-
+صاحب گروه
 !setowner [id]
-Will set id as owner
-
+ثبت صاحب گروه
 !setflood [value]
-Set [value] as flood sensitivity
-
+ثبت تکرار چت
 !stats
-Simple message statistics
-
+لیست افراد داخل گروه
 !save [value] [text]
-Save [text] as [value]
-
+ثبت مطلب 
 !get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
+ارسال مطلب
+!clean [modlist|rules|about| member]
+پاک کردن ( مدیران , قوانین , درباره , ممبر )
 !res [username]
-Returns user id
-
-!log
-Will return group logs
-
+اطلاعات کاربری فرد
 !banlist
-Will return group ban list
-
-» U can use both "/" and "!" 
-
-» Only mods, owner and admin can add bots in group
-
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-» Only owner can use res,setowner,promote,demote and log commands
-
-]]
+لیست افراد مسدود شده
+ --------------------------------------
+₪ شما میتوانید از هر دو پترن ! و / استفاده کنید.
+@nortteam
+admin: @nort_admin 
+bot: @nort_admin_bot]]
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
